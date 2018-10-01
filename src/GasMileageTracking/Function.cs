@@ -32,7 +32,7 @@ namespace GasMileageTracking
         /// <returns>The list of blogs</returns>
         public APIGatewayProxyResponse Get(APIGatewayProxyRequest request, ILambdaContext context)
         {
-	        var result = carProcessor.GetCar("Chevy");
+	        var result = carProcessor.GetCar("Chevy"); 
 
 	        return _CreateResponse(result);
         }
