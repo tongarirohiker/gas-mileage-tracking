@@ -1,0 +1,15 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+      - echo Restore started on `date`
+      - dotnet restore src/GasMileageTracking/GasMileageTracking.csproj
+  build:
+    commands:
+      - echo Build started on `date`
+      - dotnet publish -c release -o ./build_output src/GasMileageTracking/GasMileageTracking.csproj
+artifacts:
+  files:
+    - src/GasMileageTracking/build_output/**/*
+    - scripts/**/*
+    - appspec.yml
