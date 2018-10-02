@@ -12,4 +12,4 @@ artifacts:
   files:
     - src/GasMileageTracking/build_output/**/*
     - scripts/**/*
-    - serverless.template
+    - src/GasMileageTracking/serverless.template
