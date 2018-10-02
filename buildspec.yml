@@ -1,5 +1,8 @@
 version: 0.2
 phases:
+  install:
+    commands:
+      - dotnet tool install -g Amazon.Lambda.Tools
   pre_build:
     commands:
       - echo Restore started on `date`
