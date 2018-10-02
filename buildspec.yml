@@ -1,8 +1,5 @@
 version: 0.2
 phases:
-  install:
-    commands:
-      - dotnet tool install -g Amazon.Lambda.Tools
   pre_build:
     commands:
       - echo Restore started on `date`
@@ -10,10 +7,9 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - dotnet lambda package-ci -ot serverless.template --s3-bucket ryanmeriaamaawstest
+      - cd src/GasMileageTracking
+      - dotnet lambda package-ci -ot ../../serverless.template --s3-bucket ryanmeriaamaawstest
 artifacts:
   files:
-    - src/GasMileageTracking/build_output/**/*
-    - scripts/**/*
     - serverless.template
   discard-paths: yes
