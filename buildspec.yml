@@ -3,6 +3,7 @@ phases:
   pre_build:
     commands:
       - echo Restore started on `date`
+      - dotnet --version
       - dotnet restore src/GasMileageTracking/GasMileageTracking.csproj
   build:
     commands:
