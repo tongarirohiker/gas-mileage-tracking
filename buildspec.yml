@@ -8,8 +8,9 @@ phases:
     commands:
       - echo Build started on `date`
       - dotnet publish -c release -o ./build_output src/GasMileageTracking/GasMileageTracking.csproj
+      - aws cloudformation package --template src/GasMileageTracking/serverless.template --s3-bucket codepipeline-ca-central-1-879867068442 --output-template serverless.template
 artifacts:
   files:
     - src/GasMileageTracking/build_output/**/*
     - scripts/**/*
-    - src/GasMileageTracking/serverless.template
+    - serverless.template
