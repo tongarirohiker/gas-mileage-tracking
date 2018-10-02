@@ -19,7 +19,7 @@ namespace GasMileageTracking
 
 	    public Car GetCar(string name)
 	    {
-		    return new Car { Name = name };
+		    return new Car { Name = $"{name} {DateTime.UtcNow}" };
 	    }
 	}
 }
