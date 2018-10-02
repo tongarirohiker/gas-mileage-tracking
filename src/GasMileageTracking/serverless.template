@@ -9,8 +9,7 @@
       "Type" : "AWS::Serverless::Function",
       "Properties": {
         "Handler": "GasMileageTracking::GasMileageTracking.Functions::Get",
-        "Runtime": "dotnetcore2.1",
-        "CodeUri": "",
+        "Runtime": "dotnetcore2.1",        
         "MemorySize": 256,
         "Timeout": 30,
         "Role": null,
