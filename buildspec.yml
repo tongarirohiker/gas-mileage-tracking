@@ -12,4 +12,4 @@ artifacts:
   files:
     - src/GasMileageTracking/build_output/**/*
     - scripts/**/*
-    - appspec.yml
+    - src/GasMileageTracking/serverless.template
