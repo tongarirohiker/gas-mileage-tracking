@@ -10,9 +10,10 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - dotnet lambda package-ci -ot serverless.template
+      - dotnet lambda package-ci -ot serverless.template --s3-bucket ryanmeriaamaawstest
 artifacts:
   files:
     - src/GasMileageTracking/build_output/**/*
     - scripts/**/*
     - serverless.template
+  discard-paths: yes
